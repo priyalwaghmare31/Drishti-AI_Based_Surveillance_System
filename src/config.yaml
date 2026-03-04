@@ -1,0 +1,17 @@
+video_source: 0            # 0 = webcam, or path to video file
+detection_model: yolov8n.pt
+person_class_id: 0         # COCO class id for 'person'
+zone_thresholds:           # thresholds in 'bbox height (px)' or depth units
+  near: 200
+  mid: 120
+  far: 0
+zone_limits:               # min and max allowed people per zone
+  near: {min: 0, max: 5}
+  mid:  {min: 0, max: 10}
+  far:  {min: 0, max: 15}
+face_recognition:
+  method: facenet-pytorch   # or face_recognition
+  match_threshold: 0.6      # cosine distance threshold
+logging:
+  enabled: true
+  csv_path: ../logs/events.csv
