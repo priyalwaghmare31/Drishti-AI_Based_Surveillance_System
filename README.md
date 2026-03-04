@@ -1,4 +1,4 @@
 Install all the necessary requirements . 
 Then 
-run python.py 
+run python server.py\
 then run npm run dev 
